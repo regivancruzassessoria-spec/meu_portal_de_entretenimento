@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Portal de Entretenimento Digital</title>
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="reset.css">
+
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="estilo.css">
+
+    <!-- CSS Interno -->
+    <style>
+        /* Estilo interno aplicado ao cabeçalho */
+        header {
+            background-color: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Estilo interno para subtítulo */
+        .subtitulo {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Título da lista de links */
+        .titulo-links {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 18px;
+            margin-bottom: 10px;
+            color: #374151;
+            border-left: 4px solid currentColor;
+            padding-left: 10px;
+        }
+
+        #filmes .titulo-links { border-color: #dc2626; color: #dc2626; }
+        #musica .titulo-links { border-color: #16a34a; color: #16a34a; }
+        #games  .titulo-links { border-color: #7c3aed; color: #7c3aed; }
+
+        /* Lista de links */
+        .lista-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .lista-links li {
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .lista-links li:last-child {
+            border-bottom: none;
+        }
+
+        .lista-links a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 6px;
+            text-decoration: none;
+            color: #374151;
+            font-size: 14px;
+            border-radius: 6px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .lista-links a:hover {
+            background-color: #f3f4f6;
+            color: #111827;
+        }
+
+        /* Número do ranking */
+        .num-rank {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            font-size: 11px;
+            font-weight: bold;
+            flex-shrink: 0;
+            color: white;
+        }
+
+        #filmes .num-rank { background-color: #dc2626; }
+        #musica .num-rank { background-color: #16a34a; }
+        #games  .num-rank { background-color: #7c3aed; }
+
+        /* Descrição curta do link */
+        .link-desc {
+            font-size: 11px;
+            color: #9ca3af;
+            display: block;
+            line-height: 1.3;
+        }
+
+        .link-nome {
+            font-weight: 600;
+            display: block;
+            line-height: 1.3;
+        }
+
+        /* Seta de acesso externo */
+        .link-arrow {
+            margin-left: auto;
+            font-size: 14px;
+            color: #d1d5db;
+            flex-shrink: 0;
+        }
+
+        .lista-links a:hover .link-arrow {
+            color: #6b7280;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1 id="titulo-principal">Meu Portal de Entretenimento Digital</h1>
+        <p class="subtitulo">
+            Filmes, músicas, games e tecnologia em um só lugar.
+        </p>
+    </header>
+
+    <!-- Container principal usando Flexbox -->
+    <main class="container">
+
+        <!-- ===================== SEÇÃO FILMES E SÉRIES ===================== -->
+        <section class="card" id="filmes">
+
+            <h2 class="titulo-secao">Filmes e Séries</h2>
+
+            <img class="imagem-portal"
+                src="https://images.unsplash.com/photo-1595769816263-9b910be24d5f?w=640&auto=format&q=75"
+                alt="Sala de cinema com poltronas vermelhas">
+
+            <img class="imagem-portal"
+                src="https://images.unsplash.com/photo-1585647347384-2593bc35786b?w=640&auto=format&q=75"
+                alt="Pipoca em frente à tela assistindo série">
+
+            <p>
+                Descubra os melhores lançamentos do cinema e das séries mais assistidas do momento.
+            </p>
+
+            <p style="color: darkred; font-weight: bold;">
+                Confira críticas, trailers e novidades do universo audiovisual.
+            </p>
+
+            <p class="titulo-links">🎬 Top 10 Sites de Filmes e Séries</p>
+
+            <ul class="lista-links">
+                <li>
+                    <a href="https://www.netflix.com/br/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">1</span>
+                        <span>
+                            <span class="link-nome">Netflix</span>
+                            <span class="link-desc">Maior plataforma de streaming do mundo</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.primevideo.com/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">2</span>
+                        <span>
+                            <span class="link-nome">Amazon Prime Video</span>
+                            <span class="link-desc">Séries e filmes originais e clássicos</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.disneyplus.com/pt-br" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">3</span>
+                        <span>
+                            <span class="link-nome">Disney+</span>
+                            <span class="link-desc">Disney, Marvel, Star Wars e National Geographic</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://tv.apple.com/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">4</span>
+                        <span>
+                            <span class="link-nome">Apple TV+</span>
+                            <span class="link-desc">Produções originais premiadas de alto padrão</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.max.com/br/pt" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">5</span>
+                        <span>
+                            <span class="link-nome">Max (HBO)</span>
+                            <span class="link-desc">Séries HBO, DC e Warner Bros</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.adorocinema.com/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">6</span>
+                        <span>
+                            <span class="link-nome">AdoroCinema</span>
+                            <span class="link-desc">Críticas, notas e novidades do cinema</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.omelete.com.br/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">7</span>
+                        <span>
+                            <span class="link-nome">Omelete</span>
+                            <span class="link-desc">Notícias, reviews e cultura pop</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.imdb.com/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">8</span>
+                        <span>
+                            <span class="link-nome">IMDb</span>
+                            <span class="link-desc">Maior base de dados de filmes e séries do mundo</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/movies" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">9</span>
+                        <span>
+                            <span class="link-nome">YouTube Filmes</span>
+                            <span class="link-desc">Filmes gratuitos e para alugar no YouTube</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.telecine.com.br/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">10</span>
+                        <span>
+                            <span class="link-nome">Telecine</span>
+                            <span class="link-desc">Filmes com curadoria premium em alta qualidade</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- ===================== SEÇÃO MÚSICA E PODCASTS ===================== -->
+        <section class="card" id="musica">
+
+            <h2 class="titulo-secao">Música e Podcasts</h2>
+
+            <img class="imagem-portal"
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=640&auto=format&q=75"
+                alt="Fones de ouvido modernos">
+
+            <img class="imagem-portal"
+                src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=640&auto=format&q=75"
+                alt="Microfone de estúdio para podcast">
+
+            <p>
+                Explore playlists, artistas em alta e os podcasts mais ouvidos da atualidade.
+            </p>
+
+            <p>
+                O entretenimento sonoro está em constante evolução com novas plataformas digitais.
+            </p>
+
+            <p class="titulo-links">🎵 Top 10 Sites de Música e Podcasts</p>
+
+            <ul class="lista-links">
+                <li>
+                    <a href="https://www.spotify.com/br/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">1</span>
+                        <span>
+                            <span class="link-nome">Spotify</span>
+                            <span class="link-desc">Líder mundial em streaming de música e podcasts</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://music.youtube.com/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">2</span>
+                        <span>
+                            <span class="link-nome">YouTube Music</span>
+                            <span class="link-desc">Músicas, clipes e rádios personalizadas</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://music.apple.com/br" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">3</span>
+                        <span>
+                            <span class="link-nome">Apple Music</span>
+                            <span class="link-desc">Alta qualidade de áudio e catálogo completo</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.deezer.com/br/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">4</span>
+                        <span>
+                            <span class="link-nome">Deezer</span>
+                            <span class="link-desc">100 milhões de músicas com plano gratuito</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://music.amazon.com.br/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">5</span>
+                        <span>
+                            <span class="link-nome">Amazon Music</span>
+                            <span class="link-desc">Melhor custo-benefício com qualidade HD inclusa</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://tidal.com/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">6</span>
+                        <span>
+                            <span class="link-nome">Tidal</span>
+                            <span class="link-desc">Áudio Hi-Fi sem compressão para audiófilos</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://soundcloud.com/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">7</span>
+                        <span>
+                            <span class="link-nome">SoundCloud</span>
+                            <span class="link-desc">Plataforma para artistas independentes e novos talentos</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.palcomp3.com.br/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">8</span>
+                        <span>
+                            <span class="link-nome">Palco MP3</span>
+                            <span class="link-desc">Música brasileira independente e regional</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.suamusica.com.br/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">9</span>
+                        <span>
+                            <span class="link-nome">Sua Música</span>
+                            <span class="link-desc">Forró, sertanejo e artistas emergentes do Brasil</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.last.fm/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">10</span>
+                        <span>
+                            <span class="link-nome">Last.fm</span>
+                            <span class="link-desc">Descubra músicas e acompanhe seus hábitos musicais</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- ===================== SEÇÃO GAMES E TECNOLOGIA ===================== -->
+        <section class="card" id="games">
+
+            <h2 class="titulo-secao">Games e Tecnologia</h2>
+
+            <img class="imagem-portal"
+                src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=640&auto=format&q=75"
+                alt="Controle de videogame iluminado">
+
+            <img class="imagem-portal"
+                src="https://images.unsplash.com/photo-1593640408182-31c228e1f0b4?w=640&auto=format&q=75"
+                alt="Setup gamer com teclado RGB">
+
+            <p>
+                Conheça os jogos mais populares e as principais novidades tecnológicas do mercado.
+            </p>
+
+            <p>
+                Consoles, inteligência artificial e inovação fazem parte do futuro digital.
+            </p>
+
+            <p class="titulo-links">🎮 Top 10 Sites de Games e Tecnologia</p>
+
+            <ul class="lista-links">
+                <li>
+                    <a href="https://www.twitch.tv/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">1</span>
+                        <span>
+                            <span class="link-nome">Twitch</span>
+                            <span class="link-desc">Maior plataforma de lives e streaming de games</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://store.steampowered.com/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">2</span>
+                        <span>
+                            <span class="link-nome">Steam</span>
+                            <span class="link-desc">Maior loja digital de jogos para PC do mundo</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.roblox.com/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">3</span>
+                        <span>
+                            <span class="link-nome">Roblox</span>
+                            <span class="link-desc">Plataforma de jogos online com criação colaborativa</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.ign.com/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">4</span>
+                        <span>
+                            <span class="link-nome">IGN</span>
+                            <span class="link-desc">Reviews, notícias e trailers dos principais jogos</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.theenemy.com.br/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">5</span>
+                        <span>
+                            <span class="link-nome">The Enemy</span>
+                            <span class="link-desc">Maior portal de games e esports do Brasil</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.techtudo.com.br/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">6</span>
+                        <span>
+                            <span class="link-nome">TechTudo</span>
+                            <span class="link-desc">Notícias de tecnologia e games em português</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.metacritic.com/game/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">7</span>
+                        <span>
+                            <span class="link-nome">Metacritic Games</span>
+                            <span class="link-desc">Notas e rankings dos melhores jogos do mercado</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.chess.com/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">8</span>
+                        <span>
+                            <span class="link-nome">Chess.com</span>
+                            <span class="link-desc">O maior site de xadrez online do mundo</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.crazygames.com/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">9</span>
+                        <span>
+                            <span class="link-nome">CrazyGames</span>
+                            <span class="link-desc">Jogos gratuitos diretamente no navegador</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tecmundo.com.br/" target="_blank" rel="noopener noreferrer">
+                        <span class="num-rank">10</span>
+                        <span>
+                            <span class="link-nome">TecMundo</span>
+                            <span class="link-desc">Tecnologia, gadgets e inovação em português</span>
+                        </span>
+                        <span class="link-arrow">↗</span>
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
